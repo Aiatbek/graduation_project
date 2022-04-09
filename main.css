@@ -1,0 +1,394 @@
+/* Global Settings */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  text-align: center;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+:root {
+  --primary: #79589F;
+  --secondary: #6e5baa;
+  --dark: #260040;
+  --light: #f4f4f4;
+  --text-color: #333;
+  /* box-shadow: offset-x | offset-y | blur-radius | color; */
+  --shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+h1, h2 {
+  margin: 10px 0;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  background-color: #fed136;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bolder;
+  padding: 1.5rem 2.5rem;
+}
+
+.btn:hover {
+  background-color: #fec503;
+}
+
+.container {
+  max-width: 1050px;
+  padding: 0 50px;
+  margin: auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          flex-wrap: wrap;
+          align-content: center;
+}
+
+.grid{
+  display: grid;
+   /* grid-template-columns: 1fr 1fr 1fr; */
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.navbar {
+  background-color: transparent;
+  width: 100%;
+  padding: 1.5rem 0;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar ul li {
+  margin: 1rem;
+}
+
+.navbar ul li a {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.navbar ul li a:hover {
+  color: #fed136;
+}
+
+.navbar__logo a {
+  font-size: 2rem;
+  color: #fed136;
+  font-weight: 500;
+}
+
+.showcase {
+  width: 100%;
+  min-height: 700px;
+  background-image: url("https://learn.seytech.co/assets/projects/html-css/projects/1-agency/assets/img/header-bg.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  color: #fff;
+}
+
+.showcase .container {
+  margin-top: 250px;
+}
+
+.showcase .flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.showcase h1 {
+  font-size: 4.8rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+.showcase h2 {
+  font-size: 2.5rem;
+  font-style: italic;
+  font-weight: 350;
+}
+
+.section_title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #333;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-style: italic;
+  color: gray;
+}
+
+.card_title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #333;
+}
+
+.services{
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.services .icon{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fed136;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.services .icon:hover{
+  background-color: #fec503;
+}
+
+.link{
+  position: relative;
+}
+
+.hover i{
+  color: white;
+}
+.hover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fec503;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover:hover{
+  opacity:0.8;
+}
+
+.become_small{
+  position: relative; 
+}
+
+.hover_2{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(47, 47, 161);
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+  transition: transform ease-in-out 0.25s;
+}
+.hover_2:hover{
+  opacity:0.8;
+  transform: scale(80%);
+}
+
+
+.portfolio, .team {
+  padding: 5rem 0;
+  background-color: #f4f4f4;
+}
+
+.portfolio .card {
+  background-color: #ffffff;
+  padding: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/* *********************************************************************************
+**********************************************************************************
+**********************************************************************************
+********************************************************************************** */
+.portfolio img, .team img{
+  height: 250px;
+}
+/* Here is the problem. Images is distorted. if I will give width 100% it will not work. WHY?
+Also if I make screen smaller it will not be responsive and become smaller by not occuping whole container. 
+Can we somehow do not distort the img and size it or it all depends on img's default size itself?*/
+.portfolio img{
+  width: 310px;
+}
+
+.team img{
+  border: solid 3px lightgray;
+  border-radius: 50%;
+}
+
+.team .card{
+  height: 480px;
+}
+.team a{
+  margin: 2rem 1.1rem 0rem;
+  color: #333;
+}
+
+.team i:hover{
+  transform: scale(120%);
+}
+
+.team .container>p{
+  width: 60%;
+  margin: auto;
+}
+
+.img-row{
+  padding: 2rem;
+}
+
+.contact{
+  padding: 5rem 0;
+  background-color:#212529;
+  min-height: 700px;
+  background-image: url("https://learn.seytech.co/assets/projects/html-css/projects/1-agency/assets/img/map-image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.contact .title h1{
+  color: #fff;
+}
+
+.contact .flex{
+  flex-wrap: nowrap;
+}
+
+.input_column{
+  width: 450px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+textarea{
+  width: 450px;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+input{
+  padding: 1.5rem;
+  margin: 1.1rem;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus{
+  outline: solid 3px #fec503;
+}
+
+footer{
+  padding: 2rem;
+}
+
+.items{
+  justify-self: center!important;
+}
+
+footer a{
+  margin: 2rem 1.1rem 0rem;
+  color: #333;
+}
+
+@media(max-width:768px) {
+  .showcase{
+    padding-bottom: 2rem;
+  }
+  form{
+    padding-bottom: 2rem;
+  }
+   .contact .flex{
+     flex-direction: column;
+   }
+  form .flex{
+    margin-bottom: 2rem;
+  }
+  .showcase h2{
+    font-size: x-large;
+  }
+  .navbar__nav{
+    display: none;
+  }
+  .navbar{
+    background-color: #212529;
+  }
+}
+
+@media(max-width: 500px) {
+  .grid{
+    grid-template-columns: 1fr;
+  }
+  .portfolio .card{
+    height: 500px!important;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
